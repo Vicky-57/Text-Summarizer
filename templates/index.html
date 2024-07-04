@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Text Summarizer</h1>
+        <form action="/summarize" method="post">
+            <label for="text">Enter Text:</label>
+            <textarea id="text" name="text" rows="10" cols="50"></textarea>
+            <button type="submit" onclick="togglelement()">Summarize</button>
+        </form>
+        <div class="summary" >
+            {% if summary %}
+            <h2>Summary</h2>
+            <p>{{ summary }}</p>
+        {% endif %}
+
+        </div>
+        
+    </div>
+</body>
+<script>
+    function togglelement() {
+        let mySummary = document.querySelector('.summary');
+        if (mySummary.style.display == "none") {
+            mySummary.style.display = "block"
+        }
+        else {
+            mySummary.style.display = "none"
+        }
+    }
+</script>
+</html>

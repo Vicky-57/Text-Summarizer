@@ -102,5 +102,4 @@ class ConfigurationManager:
             metric_file_name = config.metric_file_name
            
         )
-
         return model_evaluation_config

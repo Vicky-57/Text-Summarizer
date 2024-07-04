@@ -2,7 +2,6 @@ from Text_summarizer.config.configuration import ConfigurationManager
 from Text_summarizer.components.model_trainer import ModelTrainer
 from Text_summarizer.logging import logger
 
-
 class ModelTrainerTrainingPipeline:
     def __init__(self):
         pass
